@@ -1,0 +1,11 @@
+version: '2.2'
+services:
+  surge-sh-ci:
+    build: .
+    image: lovellfelix/surge.sh-ci
+    environment:
+      SURGE_ACT_EMAIL: your-email-address@email.com
+      SURGE_ACT_TOKEN: yoru-surge-account-token
+      SURGE_PROJECT_DOMAIN: your-domain.surge.sh
+    volumes:
+      - ./data:/usr/src/app
